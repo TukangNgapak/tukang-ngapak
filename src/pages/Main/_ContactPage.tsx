@@ -5,14 +5,14 @@ export default function ContactPage() {
         {
             icon: <Phone className="w-6 h-6" />,
             title: "Telepon",
-            content: "+62 812-3456-7890",
+            content: "+62 858-1353-0803",
             link: "tel:+6281234567890"
         },
         {
             icon: <Mail className="w-6 h-6" />,
             title: "Email",
-            content: "info@tukangngapak.com",
-            link: "mailto:info@tukangngapak.com"
+            content: "ngapakcivil@gmail.com",
+            link: "mailto:ngapakcivil@gmail.com"
         },
         {
             icon: <MapPin className="w-6 h-6" />,
@@ -138,13 +138,13 @@ export default function ContactPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a
-                                    href="tel:+6281234567890"
+                                    href="tel:+6285813530803"
                                     className="bg-white text-[#E9A319] px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition-colors duration-300"
                                 >
                                     Telepon Sekarang
                                 </a>
                                 <a
-                                    href="https://wa.me/6281234567890"
+                                    href="https://wa.me/6285813530803"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="border border-white text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white hover:text-[#E9A319] transition-colors duration-300"
@@ -156,7 +156,10 @@ export default function ContactPage() {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-white p-8 rounded-lg shadow-lg">
+                    <div className="bg-white p-8 rounded-lg shadow-lg relative">
+                        <div className="bg-black/80 absolute inset-0 flex items-center justify-center rounded-lg">
+                            <h1 className="text-white text-2xl uppercase font-medium">Can't be used yet</h1>
+                        </div>
                         <h2 className="text-2xl font-semibold text-gray-800 mb-6">
                             Kirim Pesan
                         </h2>

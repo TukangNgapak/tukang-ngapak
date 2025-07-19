@@ -6,13 +6,13 @@ export default function FooterComponent() {
     const contactInfo = [
         {
             icon: <Phone className="w-5 h-5" />,
-            text: "+62 812-3456-7890",
-            link: "tel:+6281234567890"
+            text: "+62 858-1353-0803",
+            link: "tel:+6285813530803"
         },
         {
             icon: <Mail className="w-5 h-5" />,
-            text: "info@tukangngapak.com",
-            link: "mailto:info@tukangngapak.com"
+            text: "ngapakcivil@gmail.com",
+            link: "mailto:ngapakcivil@gmail.com"
         },
         {
             icon: <MapPin className="w-5 h-5" />,
