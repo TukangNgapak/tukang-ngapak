@@ -1,0 +1,88 @@
+@import "tailwindcss";
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: Notosans;
+  src: url("/font/NotoSans-VariableFont_wdth\,wght.ttf");
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Notosans;
+  font-size: 16px;
+  color: oklch(20.8% 0.042 265.755);
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+#titleHero {
+  animation: fadeInRight 0.8s ease-in-out;
+}
+
+#imgHero {
+  animation: fadeInLeft 0.8s ease-in-out;
+}
+
+#detailHero {
+  animation: fadeInTop 0.8s ease-in-out;
+}
+
+#homePage,
+#aboutPage,
+#projectPage,
+#contactPage {
+  min-height: 100vh;
+}

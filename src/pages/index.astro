@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NavbarComponent from "../components/NavbarComponent/NavbarComponent.tsx";
+import HomePage from "./Main/_HomePage";
+import AboutPage from "./Main/_AboutPage";
+import ProjectPage from "./Main/_ProjectPage";
+import ContactPage from "./Main/_ContactPage";
+import FooterComponent from "../components/FooterComponent/FooterComponent.tsx";
+---
+
+<Layout>
+  <main>
+    <NavbarComponent client:load />
+    <HomePage client:visible />
+    <AboutPage client:visible />
+    <ProjectPage client:visible />
+    <ContactPage client:visible />
+    <FooterComponent client:visible />
+  </main>
+</Layout>
+
+<style>
+  /* Global smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Ensure sections have proper spacing */
+  main > * + * {
+    margin-top: 0;
+  }
+</style>

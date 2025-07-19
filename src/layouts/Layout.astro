@@ -1,0 +1,107 @@
+---
+import "../assets/css/global.css";
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Tukang Ngapak - Solusi Terbaik untuk Renovasi & Bangun Rumah",
+  description = "Penyedia jasa tukang bangunan profesional dengan tim berpengalaman. Layanan renovasi rumah, bangun rumah baru, dan perbaikan dengan harga terjangkau.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/hero.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/hero.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>{title}</title>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Tukang Ngapak",
+        "description": "Penyedia jasa tukang bangunan profesional",
+        "serviceType": [
+          "Renovasi Rumah",
+          "Bangun Rumah Baru",
+          "Perbaikan Bangunan"
+        ],
+        "areaServed": "Indonesia",
+        "telephone": "+62 812-3456-7890",
+        "email": "info@tukangngapak.com"
+      }
+    </script>
+
+    <script type="module">
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      document.querySelectorAll(".fade-in-section").forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+  </head>
+  <body>
+    <slot />
+
+    <!-- Smooth scrolling script -->
+    <script>
+      // Smooth scrolling for anchor links
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        links.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = (
+              e.currentTarget as HTMLAnchorElement
+            ).getAttribute("href");
+            if (targetId) {
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                targetElement.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
