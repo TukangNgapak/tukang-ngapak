@@ -1,6 +1,6 @@
 ---
 import "../assets/css/global.css";
-
+import SpeedInsights from "@vercel/speed-insights/astro";
 export interface Props {
   title?: string;
   description?: string;
@@ -103,5 +103,6 @@ const {
         });
       });
     </script>
+    <SpeedInsights />
   </body>
 </html>
