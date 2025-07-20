@@ -27,7 +27,7 @@ export default function AboutPage() {
                 <div className="flex flex-col lg:flex-row gap-8 items-center">
                     <div className="w-full lg:w-1/3">
                         <img
-                            src="/hero.png"
+                            src="/PictCivil/pic19.jpg"
                             className="w-full h-auto rounded-2xl shadow-lg"
                             alt="Tukang Ngapak Hero Image"
                             loading="lazy"

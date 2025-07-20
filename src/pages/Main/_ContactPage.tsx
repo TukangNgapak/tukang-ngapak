@@ -158,7 +158,7 @@ export default function ContactPage() {
                     {/* Contact Form */}
                     <div className="bg-white p-8 rounded-lg shadow-lg relative">
                         <div className="bg-black/80 absolute inset-0 flex items-center justify-center rounded-lg">
-                            <h1 className="text-white text-2xl uppercase font-medium">Can't be used yet</h1>
+                            <h1 className="text-gray-400 text-2xl uppercase font-medium font-sans">Can't be used yet</h1>
                         </div>
                         <h2 className="text-2xl font-semibold text-gray-800 mb-6">
                             Kirim Pesan
