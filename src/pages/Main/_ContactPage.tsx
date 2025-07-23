@@ -91,18 +91,18 @@ export default function ContactPage() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 fade-in-section">
+                <div className="w-full fade-in-section">
                     {/* Contact Information */}
                     <div className="space-y-8">
                         <div>
                             <h2 className="text-2xl font-semibold text-gray-800 mb-6">
                                 Informasi Kontak
                             </h2>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-4 justify-center w-full gap-6">
                                 {contactInfo.map((info, index) => (
                                     <div
                                         key={index}
-                                        className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                                        className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 w-full"
                                     >
                                         <div className="flex items-center gap-4 mb-3">
                                             <div className="text-[#E9A319]">
@@ -153,99 +153,6 @@ export default function ContactPage() {
                                 </a>
                             </div>
                         </div>
-                    </div>
-
-                    {/* Contact Form */}
-                    <div className="bg-white p-8 rounded-lg shadow-lg relative">
-                        <div className="bg-black/80 absolute inset-0 flex items-center justify-center rounded-lg">
-                            <h1 className="text-gray-400 text-2xl uppercase font-medium font-sans">Can't be used yet</h1>
-                        </div>
-                        <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-                            Kirim Pesan
-                        </h2>
-                        <form className="space-y-6" method="POST" autoComplete="off" onSubmit={handleSubmit}>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                                        Nama Lengkap
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E9A319] focus:border-transparent outline-none transition-all duration-300"
-                                        placeholder="Masukkan nama lengkap"
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                                        Nomor Telepon
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E9A319] focus:border-transparent outline-none transition-all duration-300"
-                                        placeholder="Masukkan nomor telepon"
-                                        required
-                                    />
-                                </div>
-                            </div>
-
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E9A319] focus:border-transparent outline-none transition-all duration-300"
-                                    placeholder="Masukkan email"
-                                    required
-                                />
-                            </div>
-
-                            <div>
-                                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                                    Jenis Layanan
-                                </label>
-                                <select
-                                    id="service"
-                                    name="service"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E9A319] focus:border-transparent outline-none transition-all duration-300"
-                                    required
-                                >
-                                    <option value="">Pilih jenis layanan</option>
-                                    <option value="bangun-rumah">Bangun Rumah</option>
-                                    <option value="renovasi">Renovasi Rumah</option>
-                                    <option value="perbaikan">Perbaikan</option>
-                                    <option value="lainnya">Lainnya</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                                    Pesan
-                                </label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows={2}
-                                    className="resize-none w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E9A319] focus:border-transparent outline-none transition-all duration-300 resize-vertical"
-                                    placeholder="Deskripsikan proyek atau kebutuhan Anda..."
-                                    required
-                                ></textarea>
-                            </div>
-
-                            <button
-                                type="submit"
-                                className="w-full bg-[#E9A319] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#d4921a] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#E9A319] focus:ring-offset-2"
-                            >
-                                Kirim Pesan
-                            </button>
-                        </form>
                     </div>
                 </div>
             </div>
