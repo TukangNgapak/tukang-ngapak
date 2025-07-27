@@ -17,13 +17,13 @@ export default function ContactPage() {
         {
             icon: <MapPin className="w-6 h-6" />,
             title: "Alamat",
-            content: "Jl. Contoh Alamat No. 123, Kota, Provinsi",
+            content: "",
             link: "#"
         },
         {
             icon: <Clock className="w-6 h-6" />,
             title: "Jam Kerja",
-            content: "Senin - Sabtu: 07.00 - 17.00 WIB",
+            content: "",
             link: "#"
         }
     ];
