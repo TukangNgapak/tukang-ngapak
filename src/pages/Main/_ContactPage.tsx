@@ -5,7 +5,7 @@ export default function ContactPage() {
         {
             icon: <Phone className="w-6 h-6" />,
             title: "Telepon",
-            content: "+62 858-1353-0803",
+            content: "+62 858-1353-0803 (Veroh/Bpk. Hafiz)",
             link: "tel:+6281234567890"
         },
         {
@@ -17,7 +17,7 @@ export default function ContactPage() {
         {
             icon: <MapPin className="w-6 h-6" />,
             title: "Alamat",
-            content: "Kampung Bulak Kendar RT 10/RW 003. Desa Mekarsari, Tambun Selatan, Bekasi, Jawa Barat, 17510",
+            content: "Kampung Bulak Kendar RT 10/RW 003. Desa Mekarsari, Tambun Selatan, Bekasi, Jawa Barat, 17510. (Veroh/Bpk. Hafiz)",
             link: "#"
         },
     ];
