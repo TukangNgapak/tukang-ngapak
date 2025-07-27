@@ -34,10 +34,10 @@ export default function AboutPage() {
                         />
                     </div>
                     <div className="w-full lg:w-2/3">
-                        <h1 className="text-3xl md:text-4xl font-semibold uppercase mb-4 text-gray-800">
+                        <h1 className="text-xl md:text-2xl font-semibold uppercase mb-4 text-gray-800">
                             Tentang Kami
                         </h1>
-                        <div className="text-justify text-base md:text-lg leading-relaxed text-gray-600">
+                        <div className="text-justify text-base leading-relaxed text-gray-600">
                             <p>
                                 <strong className="text-[#E9A319]">Tukang Ngapak</strong> adalah penyedia jasa tukang bangunan profesional
                                 yang siap membantu Anda dalam membangun, merenovasi, dan memperbaiki rumah atau bangunan lainnya.
@@ -58,7 +58,7 @@ export default function AboutPage() {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="bg-[#E9A319] text-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                            className="bg-gray-800 text-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                         >
                             <h2 className="font-semibold text-xl md:text-2xl text-center mb-4">
                                 {feature.title}
