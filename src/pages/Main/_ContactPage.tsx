@@ -17,15 +17,9 @@ export default function ContactPage() {
         {
             icon: <MapPin className="w-6 h-6" />,
             title: "Alamat",
-            content: "",
+            content: "Kampung Bulak Kendar RT 10/RW 003. Desa Mekarsari, Tambun Selatan, Bekasi, Jawa Barat, 17510",
             link: "#"
         },
-        {
-            icon: <Clock className="w-6 h-6" />,
-            title: "Jam Kerja",
-            content: "",
-            link: "#"
-        }
     ];
 
     interface ContactFormElements extends HTMLFormControlsCollection {
