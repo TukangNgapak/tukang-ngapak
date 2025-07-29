@@ -32,19 +32,9 @@ export default function FooterComponent() {
 
     const socialMedia = [
         {
-            icon: <Facebook className="w-5 h-5" />,
-            name: "Facebook",
-            link: "#"
-        },
-        {
-            icon: <Instagram className="w-5 h-5" />,
-            name: "Instagram",
-            link: "#"
-        },
-        {
-            icon: <Twitter className="w-5 h-5" />,
-            name: "Twitter",
-            link: "#"
+            icon: <img src="tik-tok.png" alt="Tiktok Link" className="w-6 h-6 rounded-full" />,
+            name: "Tiktok",
+            link: "https://www.tiktok.com/@hafiz.hafiz2340"
         }
     ];
 

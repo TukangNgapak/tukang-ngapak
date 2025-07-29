@@ -113,6 +113,9 @@ export default function NavbarComponent() {
                 </button>
               </li>
             ))}
+            <li>
+              <img src="/TNlogo.png" alt="Logo Tukang Ngapak" className="w-10 h-auto rounded-full" />
+            </li>
           </ul>
 
           {/* Mobile Menu Toggle */}

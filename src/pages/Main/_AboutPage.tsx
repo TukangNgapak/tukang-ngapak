@@ -25,12 +25,11 @@ export default function AboutPage() {
             <div className="fade-in-section flex flex-col justify-center gap-8 w-full max-w-6xl mx-auto">
                 {/* Main About Section */}
                 <div className="flex flex-col lg:flex-row gap-8 items-center">
-                    <div className="w-full lg:w-1/3">
+                    <div className="w-full lg:w-1/4">
                         <img
-                            src="/PictCivil/pic19.jpg"
-                            className="w-full h-auto rounded-2xl shadow-lg"
-                            alt="Tukang Ngapak Hero Image"
-                            loading="lazy"
+                            src="/TNtitle.png"
+                            className="w-full h-auto rounded-2xl shadow-lg object-cover"
+                            alt="Tukang Ngapak Title Logo"
                         />
                     </div>
                     <div className="w-full lg:w-2/3">
@@ -58,7 +57,7 @@ export default function AboutPage() {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="bg-gray-800 text-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                            className="bg-[#E9A319] text-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                         >
                             <h2 className="font-semibold text-xl md:text-2xl text-center mb-4">
                                 {feature.title}

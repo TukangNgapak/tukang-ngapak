@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import NavbarComponent from "../components/NavbarComponent/NavbarComponent.tsx";
 import HomePage from "./Main/_HomePage";
 import AboutPage from "./Main/_AboutPage";
-import ProjectPage from "./Main/_ProjectPage";
+import GalleryPage from "./Main/_GalleryPage.tsx";
 import ContactPage from "./Main/_ContactPage";
 import FooterComponent from "../components/FooterComponent/FooterComponent.tsx";
 ---
@@ -13,7 +13,7 @@ import FooterComponent from "../components/FooterComponent/FooterComponent.tsx";
     <NavbarComponent client:load />
     <HomePage client:visible />
     <AboutPage client:visible />
-    <ProjectPage client:visible />
+    <GalleryPage client:visible />
     <ContactPage client:visible />
     <FooterComponent client:visible />
   </main>

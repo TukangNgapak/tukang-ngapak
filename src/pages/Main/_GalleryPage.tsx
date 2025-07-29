@@ -1,16 +1,16 @@
 import { galleryData } from "../../variable/gallery";
 
-export default function ProjectPage() {
+export default function GalleryPage() {
     return (
         <section id="projectPage" className="py-16 px-4">
             <div className="fade-in-section max-w-6xl mx-auto space-y-12">
                 {/* Header Section */}
                 <div className="text-center">
                     <h1 className="text-3xl md:text-4xl font-bold uppercase text-gray-800 mb-2">
-                        Proyek Kami
+                        Gallery
                     </h1>
                     <p className="text-lg text-gray-500">
-                        - Our Projects -
+                        - Galeri Kami -
                     </p>
                 </div>
 
