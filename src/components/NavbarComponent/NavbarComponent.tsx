@@ -85,8 +85,8 @@ export default function NavbarComponent() {
     <>
       <nav
         className={`w-full px-4 sm:px-6 py-4 z-50 transition-all duration-300 ${isScrolled
-          ? "fixed top-0 bg-white/95 backdrop-blur-sm shadow-lg text-gray-800"
-          : "absolute top-0 bg-transparent text-white"
+          ? "fixed top-0 bg-gray-800 shadow-lg text-[#FFB823]"
+          : "fixed top-0 bg-transparent text-white"
           }`}
       >
         <div className="flex justify-between items-center max-w-6xl mx-auto">
@@ -105,7 +105,7 @@ export default function NavbarComponent() {
                 <button
                   onClick={() => handleLinkClick(item.link)}
                   className={`transition-all duration-300 font-semibold px-3 py-2 rounded hover:scale-105 ${isScrolled
-                    ? "text-gray-800 hover:text-[#E9A319] hover:bg-[#E9A319]/10"
+                    ? "text-white hover:text-[#E9A319] hover:bg-[#E9A319]/10"
                     : "text-white hover:text-[#FFB823] hover:bg-white/10"
                     }`}
                 >
