@@ -177,16 +177,16 @@ export default function NavbarComponent() {
             <div className="text-center text-gray-600">
               <p className="font-semibold mb-2">Hubungi Kami</p>
               <a
-                href="tel:+6281234567890"
+                href="tel:+6285813530803"
                 className="block text-[#E9A319] hover:underline mb-2"
               >
-                +62 812-3456-7890
+                +62 858-1353-0803
               </a>
               <a
-                href="mailto:info@tukangngapak.com"
+                href="mailto:ngapakcivil@gmail.com"
                 className="block text-[#E9A319] hover:underline"
               >
-                info@tukangngapak.com
+                ngapakcivil@gmail.com
               </a>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function FooterComponent() {
     const currentYear = new Date().getFullYear();
@@ -16,7 +16,7 @@ export default function FooterComponent() {
         },
         {
             icon: <MapPin className="w-5 h-5" />,
-            text: "Jl. Contoh Alamat No. 123, Kota, Provinsi",
+            text: "Kampung Bulak Kendar RT 10/RW 003. Desa Mekarsari, Tambun Selatan, Bekasi, Jawa Barat, 17510. (Veroh/Bpk. Hafiz)",
             link: "#"
         }
     ];
