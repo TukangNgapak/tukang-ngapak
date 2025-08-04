@@ -47,7 +47,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Services Card */}
-                <div className="bg-[#E9A319] rounded-xl shadow-lg px-4 py-5 pb-10 w-full max-w-6xl mx-auto translate-y-1/4 md:translate-y-1/2">
+                <div className="bg-white/10 backdrop-blur-xl rounded-xl shadow-lg px-4 py-5 pb-10 w-full max-w-6xl mx-auto translate-y-1/4 md:translate-y-1/2">
                     <div className="grid grid-cols-3 gap-6 md:gap-8">
                         {services.map((service, index) => (
                             <div
