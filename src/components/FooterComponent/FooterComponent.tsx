@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircleMore } from "lucide-react";
 
 export default function FooterComponent() {
     const currentYear = new Date().getFullYear();
@@ -35,6 +35,11 @@ export default function FooterComponent() {
             icon: <img src="tik-tok.png" alt="Tiktok Link" className="w-6 h-6 rounded-full" />,
             name: "Tiktok",
             link: "https://www.tiktok.com/@hafiz.hafiz2340"
+        },
+        {
+            icon: <MessageCircleMore className="w-6 h-6" color="green" />,
+            name: "Whatsapp",
+            link: "https://wa.me/6285813530803",
         }
     ];
 
@@ -48,7 +53,7 @@ export default function FooterComponent() {
     };
 
     return (
-        <footer className="bg-gray-800 text-white">
+        <footer className="bg-white text-black">
             <div className="max-w-6xl mx-auto px-4 py-12">
                 {/* Main Footer Content */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -58,7 +63,7 @@ export default function FooterComponent() {
                         <h3 className="text-xl font-bold uppercase tracking-wide mb-4 text-[#FFB823]">
                             Tukang Ngapak
                         </h3>
-                        <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                        <p className="text-gray-400 text-sm leading-relaxed mb-4">
                             Penyedia jasa tukang bangunan profesional dengan komitmen
                             "Ngapak Ora Ngapusi". Kami mengutamakan kualitas,
                             transparansi, dan kepuasan pelanggan.
@@ -68,7 +73,7 @@ export default function FooterComponent() {
                                 <a
                                     key={index}
                                     href={social.link}
-                                    className="bg-gray-700 hover:bg-[#E9A319] p-2 rounded-lg transition-colors duration-300"
+                                    className="bg-gray-200 hover:bg-[#E9A319] p-2 rounded-lg transition-colors duration-300"
                                     aria-label={`Follow us on ${social.name}`}
                                 >
                                     {social.icon}
@@ -79,13 +84,13 @@ export default function FooterComponent() {
 
                     {/* Services */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-4 text-[#FFB823]">
+                        <h4 className="text-lg font-semibold mb-4">
                             Layanan Kami
                         </h4>
                         <ul className="space-y-2">
                             {services.map((service, index) => (
                                 <li key={index}>
-                                    <span className="text-gray-300 text-sm hover:text-white transition-colors cursor-default">
+                                    <span className="text-gray-400 text-sm hover:text-gray-800 transition-colors cursor-default">
                                         {service}
                                     </span>
                                 </li>
@@ -95,14 +100,14 @@ export default function FooterComponent() {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-4 text-[#FFB823]">
+                        <h4 className="text-lg font-semibold mb-4">
                             Menu Cepat
                         </h4>
                         <ul className="space-y-2">
                             <li>
                                 <button
                                     onClick={() => handleLinkClick('#homePage')}
-                                    className="text-gray-300 text-sm hover:text-white transition-colors"
+                                    className="text-gray-400 text-sm hover:text-gray-800 transition-colors"
                                 >
                                     Beranda
                                 </button>
@@ -110,7 +115,7 @@ export default function FooterComponent() {
                             <li>
                                 <button
                                     onClick={() => handleLinkClick('#aboutPage')}
-                                    className="text-gray-300 text-sm hover:text-white transition-colors"
+                                    className="text-gray-400 text-sm hover:text-gray-800 transition-colors"
                                 >
                                     Tentang Kami
                                 </button>
@@ -118,7 +123,7 @@ export default function FooterComponent() {
                             <li>
                                 <button
                                     onClick={() => handleLinkClick('#projectPage')}
-                                    className="text-gray-300 text-sm hover:text-white transition-colors"
+                                    className="text-gray-400 text-sm hover:text-gray-800 transition-colors"
                                 >
                                     Proyek Kami
                                 </button>
@@ -126,7 +131,7 @@ export default function FooterComponent() {
                             <li>
                                 <button
                                     onClick={() => handleLinkClick('#contactPage')}
-                                    className="text-gray-300 text-sm hover:text-white transition-colors"
+                                    className="text-gray-400 text-sm hover:text-gray-800 transition-colors"
                                 >
                                     Kontak
                                 </button>
@@ -136,7 +141,7 @@ export default function FooterComponent() {
 
                     {/* Contact Info */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-4 text-[#FFB823]">
+                        <h4 className="text-lg font-semibold mb-4">
                             Hubungi Kami
                         </h4>
                         <ul className="space-y-3">
@@ -148,12 +153,12 @@ export default function FooterComponent() {
                                     {info.link !== "#" ? (
                                         <a
                                             href={info.link}
-                                            className="text-gray-300 text-sm hover:text-white transition-colors leading-relaxed"
+                                            className="text-gray-400 text-sm hover:text-gray-800 transition-colors leading-relaxed"
                                         >
                                             {info.text}
                                         </a>
                                     ) : (
-                                        <span className="text-gray-300 text-sm leading-relaxed">
+                                        <span className="text-gray-400 text-sm leading-relaxed">
                                             {info.text}
                                         </span>
                                     )}
@@ -165,25 +170,14 @@ export default function FooterComponent() {
 
                 {/* Divider */}
                 <div className="border-t border-gray-700 mt-8 pt-8">
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div className="flex flex-col md:flex-row justify-center items-center">
 
                         {/* Copyright */}
-                        <div className="text-gray-400 text-sm text-center md:text-left">
+                        <div className="text-gray-400 text-sm text-center">
                             <p>
                                 © {currentYear} <span className="font-semibold">CodersProject</span>.
                                 All rights reserved.
                             </p>
-                        </div>
-
-                        {/* Additional Links */}
-                        <div className="flex gap-4 text-sm">
-                            <button className="text-gray-400 hover:text-white transition-colors">
-                                Privacy Policy
-                            </button>
-                            <span className="text-gray-600">|</span>
-                            <button className="text-gray-400 hover:text-white transition-colors">
-                                Terms of Service
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -198,13 +192,13 @@ export default function FooterComponent() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <a
-                            href="tel:+6281234567890"
+                            href="tel:+6285813530803"
                             className="bg-white text-[#E9A319] px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
                         >
                             Telepon Sekarang
                         </a>
                         <a
-                            href="https://wa.me/6281234567890"
+                            href="https://wa.me/6285813530803"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="border border-white text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-[#E9A319] transition-colors text-sm"

@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactPage() {
     const contactInfo = [
@@ -6,7 +6,7 @@ export default function ContactPage() {
             icon: <Phone className="w-6 h-6" />,
             title: "Telepon",
             content: "+62 858-1353-0803 (Veroh/Bpk. Hafiz)",
-            link: "tel:+6281234567890"
+            link: "tel:+6285813530803"
         },
         {
             icon: <Mail className="w-6 h-6" />,
@@ -22,58 +22,8 @@ export default function ContactPage() {
         },
     ];
 
-    interface ContactFormElements extends HTMLFormControlsCollection {
-        name: HTMLInputElement;
-        phone: HTMLInputElement;
-        email: HTMLInputElement;
-        service: HTMLSelectElement;
-        message: HTMLTextAreaElement;
-    }
-
-    interface ContactForm extends HTMLFormElement {
-        elements: ContactFormElements;
-    }
-
-    interface SendEmailResponse {
-        success: boolean;
-        [key: string]: any;
-    }
-
-    async function handleSubmit(e: React.FormEvent<ContactForm>) {
-        e.preventDefault(); // hindari reload halaman
-
-        const form = e.target as ContactForm;
-        const formData = new FormData(form);
-
-        const res = await fetch('/Api/send-email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                to: formData.get('email'),
-                subject: `Pesan dari ${formData.get('name')}`,
-                message: `
-                <strong>Nama:</strong> ${formData.get('name')}<br/>
-                <strong>Telepon:</strong> ${formData.get('phone')}<br/>
-                <strong>Email:</strong> ${formData.get('email')}<br/>
-                <strong>Layanan:</strong> ${formData.get('service')}<br/>
-                <strong>Pesan:</strong> ${formData.get('message')}
-    `,
-            }),
-        });
-
-
-        const data: SendEmailResponse = await res.json();
-        if (data.success) {
-            alert('Email berhasil dikirim!');
-            form.reset();
-        } else {
-            alert('Gagal mengirim email.');
-        }
-    }
-
-
     return (
-        <section id="contactPage" className="py-16 px-4 bg-gray-50">
+        <section id="contactPage" className="py-16 px-4 bg-white">
             <div className="max-w-6xl mx-auto fade-in-section">
                 {/* Header */}
                 <div className="text-center mb-12">
@@ -122,8 +72,8 @@ export default function ContactPage() {
                         </div>
 
                         {/* CTA Section */}
-                        <div className="bg-[#E9A319] text-white p-8 rounded-lg">
-                            <h3 className="text-2xl font-bold mb-4">
+                        <div className="bg-white text-black shadow-md shadow-gray-20 p-8 rounded-lg">
+                            <h3 className="text-2xl font-bold mb-4 text-[#E9A319]">
                                 Konsultasi Gratis!
                             </h3>
                             <p className="mb-6 opacity-90">
@@ -133,7 +83,7 @@ export default function ContactPage() {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a
                                     href="tel:+6285813530803"
-                                    className="bg-white text-[#E9A319] px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition-colors duration-300"
+                                    className="px-6 py-3 rounded-lg font-semibold text-center bg-white text-[#E9A319] shadow-md shadow-gray-200 hover:brightness-95 duration-300"
                                 >
                                     Telepon Sekarang
                                 </a>
@@ -141,7 +91,7 @@ export default function ContactPage() {
                                     href="https://wa.me/6285813530803"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="border border-white text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white hover:text-[#E9A319] transition-colors duration-300"
+                                    className="px-6 py-3 rounded-lg font-semibold text-center bg-[#E9A319] text-white shadow-md shadow-gray-200 hover:bg-white hover:text-[#E9A319] duration-300"
                                 >
                                     WhatsApp
                                 </a>

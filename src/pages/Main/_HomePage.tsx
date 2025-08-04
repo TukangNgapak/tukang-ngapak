@@ -24,17 +24,15 @@ export default function HomePage() {
             {/* Background Image */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: "url('/hero.jpg')" }}
+                style={{ backgroundImage: "url('/hero.png')" }}
                 role="img"
                 aria-label="Construction background"
-            />
-
+            ></div>
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/50 z-10" />
-
+            <div className="absolute inset-0 bg-black/50 z-10" ></div>
             {/* Main Content */}
             <div className="fade-in-section relative z-20 flex flex-col items-center justify-center h-full px-4 text-center text-white">
-                <div className="mb-8">
+                <div className="mb-8 md:mb-0">
                     <h2 className="text-lg md:text-xl font-light mb-2">
                         Selamat Datang di
                     </h2>

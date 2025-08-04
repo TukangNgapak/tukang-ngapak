@@ -36,7 +36,7 @@ export default function AboutPage() {
                         <h1 className="text-xl md:text-2xl font-semibold uppercase mb-4 text-gray-800">
                             Tentang Kami
                         </h1>
-                        <div className="text-justify text-base leading-relaxed text-gray-600">
+                        <div className="text-justify leading-relaxed text-gray-600">
                             <p>
                                 <strong className="text-[#E9A319]">Tukang Ngapak</strong> adalah penyedia jasa tukang bangunan profesional
                                 yang siap membantu Anda dalam membangun, merenovasi, dan memperbaiki rumah atau bangunan lainnya.
