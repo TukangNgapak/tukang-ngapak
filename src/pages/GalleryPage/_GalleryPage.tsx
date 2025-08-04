@@ -1,8 +1,7 @@
 import { galleryData } from "../../variable/gallery";
-
 export default function GalleryPage() {
     return (
-        <section id="projectPage" className="py-16 px-4">
+        <section id="galleryPage" className="py-16 px-4">
             <div className="fade-in-section max-w-6xl mx-auto space-y-12">
                 {/* Header Section */}
                 <div className="text-center">
@@ -15,7 +14,7 @@ export default function GalleryPage() {
                 </div>
 
                 {/* Gallery Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="MyGradient grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
                     {galleryData.map((item) => (
                         <div
                             key={item.id}
@@ -29,6 +28,13 @@ export default function GalleryPage() {
                             />
                         </div>
                     ))}
+                </div>
+                <div className="w-full -translate-y-[2rem] flex justify-center items-center">
+                    <a
+                        href="/gallery"
+                        className="w-fit text-center text-[#E9A319] hover:text-[#E9A319] hover:bg-[#E9A319]/10 transition-all duration-300 py-2 px-4 text-lg font-medium rounded-lg"
+                    >
+                        Lihat Selengkapnya</a>
                 </div>
 
                 {/* Call to Action */}

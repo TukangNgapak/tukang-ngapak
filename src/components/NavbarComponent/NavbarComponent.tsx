@@ -56,7 +56,7 @@ export default function NavbarComponent() {
   const navigationItems = [
     { label: "Home", link: "#homePage" },
     { label: "About", link: "#aboutPage" },
-    { label: "Project", link: "#projectPage" },
+    { label: "Gallery", link: "#galleryPage" },
     { label: "Contact", link: "#contactPage" },
   ];
 

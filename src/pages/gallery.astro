@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GalleryComponent from "../components/GalleryComponent/GalleryComponent.tsx";
+---
+
+<Layout>
+  <main>
+    <!-- Gallery Content -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto p-8">
+        <GalleryComponent client:visible />
+      </div>
+    </section>
+  </main>
+</Layout>
