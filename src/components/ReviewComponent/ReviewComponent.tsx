@@ -29,7 +29,7 @@ export default function ReviewComponent() {
                                 <h2 className="font-semibold text-lg text-gray-800">
                                     {review.name}
                                 </h2>
-                                <p className="text-yellow-500 text-sm">
+                                <p className="text-yellow-500 text-md">
                                     {"⭐".repeat(review.stars)}
                                 </p>
                             </div>
@@ -65,7 +65,7 @@ export default function ReviewComponent() {
                                 <h2 className="font-semibold text-lg text-gray-800">
                                     {review.name}
                                 </h2>
-                                <p className="text-yellow-500 text-sm">
+                                <p className="text-yellow-500 text-md">
                                     {"⭐".repeat(review.stars)}
                                 </p>
                             </div>
