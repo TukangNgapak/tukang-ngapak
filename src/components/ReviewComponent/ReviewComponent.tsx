@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { reviews } from "../../variable/review";
+import { UserRound } from "lucide-react"
 
 export default function ReviewComponent() {
     return (
@@ -20,11 +21,7 @@ export default function ReviewComponent() {
                         className="min-w-[22rem] max-w-[22rem] h-full bg-white shadow-md border border-gray-200 rounded-xl p-4 flex flex-col justify-center"
                     >
                         <div className="flex items-center gap-3 mb-2">
-                            <img
-                                src={review.avatar}
-                                alt={`Avatar of ${review.name}`}
-                                className="w-12 h-12 rounded-full object-cover"
-                            />
+                            <UserRound className="w-8 h-8 ring-2 ring-gray-400 rounded-full text-gray-400" />
                             <div>
                                 <h2 className="font-semibold text-lg text-gray-800">
                                     {review.name}
@@ -56,11 +53,7 @@ export default function ReviewComponent() {
                         className="min-w-[22rem] max-w-[22rem] h-full bg-white shadow-md border border-gray-200 rounded-xl p-4 flex flex-col justify-center"
                     >
                         <div className="flex items-center gap-3 mb-2">
-                            <img
-                                src={review.avatar}
-                                alt={`Avatar of ${review.name}`}
-                                className="w-12 h-12 rounded-full object-cover"
-                            />
+                            <UserRound className="w-8 h-8 ring-2 ring-gray-400 rounded-full text-gray-400" />
                             <div>
                                 <h2 className="font-semibold text-lg text-gray-800">
                                     {review.name}

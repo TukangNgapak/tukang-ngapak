@@ -83,7 +83,7 @@ export default function ContactPage() {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a
                                     href="tel:+6285813530803"
-                                    className="px-6 py-3 rounded-lg font-semibold text-center bg-white text-[#E9A319] shadow-md shadow-gray-200 hover:brightness-95 duration-300"
+                                    className="px-6 py-3 rounded-lg font-semibold text-center bg-[#E9A319] text-white shadow-md shadow-gray-200 hover:bg-white hover:text-[#E9A319] duration-300"
                                 >
                                     Telepon Sekarang
                                 </a>
@@ -94,6 +94,14 @@ export default function ContactPage() {
                                     className="px-6 py-3 rounded-lg font-semibold text-center bg-[#E9A319] text-white shadow-md shadow-gray-200 hover:bg-white hover:text-[#E9A319] duration-300"
                                 >
                                     WhatsApp
+                                </a>
+                                <a
+                                    href="https://www.tiktok.com/@tukangngapak4?is_from_webapp=1&sender_device=pc"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-6 py-3 rounded-lg font-semibold text-center bg-[#E9A319] text-white shadow-md shadow-gray-200 hover:bg-white hover:text-[#E9A319] duration-300"
+                                >
+                                    Tiktok
                                 </a>
                             </div>
                         </div>

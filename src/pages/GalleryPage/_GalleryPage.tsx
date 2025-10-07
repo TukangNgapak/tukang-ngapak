@@ -1,5 +1,13 @@
-import { galleryData } from "../../variable/gallery";
+import { useState } from "react";
+import { imageComponent } from "../../variable/gallery";
+
 export default function GalleryPage() {
+    const [visibleCount, setVisibleCount] = useState(9); // jumlah awal foto
+
+    const handleLoadMore = () => {
+        setVisibleCount((prev) => prev + 9); // tambah 9 setiap klik
+    };
+
     return (
         <section id="galleryPage" className="py-16 px-4">
             <div className="fade-in-section max-w-6xl mx-auto space-y-12">
@@ -8,14 +16,12 @@ export default function GalleryPage() {
                     <h1 className="text-3xl md:text-4xl font-bold uppercase text-gray-800 mb-2">
                         Gallery
                     </h1>
-                    <p className="text-lg text-gray-500">
-                        - Galeri Kami -
-                    </p>
+                    <p className="text-lg text-gray-500">- Galeri Kami -</p>
                 </div>
 
                 {/* Gallery Grid */}
                 <div className="MyGradient grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
-                    {galleryData.map((item) => (
+                    {imageComponent.slice(0, visibleCount).map((item) => (
                         <div
                             key={item.id}
                             className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
@@ -29,13 +35,18 @@ export default function GalleryPage() {
                         </div>
                     ))}
                 </div>
-                <div className="w-full -translate-y-[2rem] flex justify-center items-center">
-                    <a
-                        href="/gallery"
-                        className="w-fit text-center text-[#E9A319] hover:text-[#E9A319] hover:bg-[#E9A319]/10 transition-all duration-300 py-2 px-4 text-lg font-medium rounded-lg"
-                    >
-                        Lihat Selengkapnya</a>
-                </div>
+
+                {imageComponent.length > 0 && (
+                    <div className="w-full -translate-y-[2rem] flex justify-center items-center">
+                        <button
+                            onClick={handleLoadMore}
+                            className={`cursor-pointer w-fit text-center text-[#E9A319] hover:text-[#E9A319] hover:bg-[#E9A319]/10 ${imageComponent.length > visibleCount ? "block" : "hidden"} transition-all duration-300 py-2 px-4 text-lg font-medium`}
+                        >
+                            Lihat Selengkapnya
+                        </button>
+                    </div>
+                )}
+
 
                 {/* Call to Action */}
                 <div className="text-center bg-gray-50 rounded-xl p-8">

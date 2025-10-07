@@ -32,12 +32,12 @@ export default function FooterComponent() {
 
     const socialMedia = [
         {
-            icon: <img src="tik-tok.png" alt="Tiktok Link" className="w-6 h-6 rounded-full" />,
+            icon: <img src="tik-tok.png" alt="Tiktok Link" className="w-8 h-8 rounded-2xl" />,
             name: "Tiktok",
-            link: "https://www.tiktok.com/@hafiz.hafiz2340"
+            link: "https://www.tiktok.com/@tukangngapak4?is_from_webapp=1&sender_device=pc"
         },
         {
-            icon: <MessageCircleMore className="w-6 h-6" color="green" />,
+            icon: <img src="whatsapp.jpg" alt="Whatsapp Link" className="w-8 h-8 rounded-2xl" />,
             name: "Whatsapp",
             link: "https://wa.me/6285813530803",
         }
